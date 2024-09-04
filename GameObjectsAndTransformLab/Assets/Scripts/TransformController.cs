@@ -6,7 +6,7 @@ public class TransformController : MonoBehaviour
 {
     private void Update()
     {
-        var x = Mathf.PingPong(Time.time, 3);
+        var x = Mathf.PingPong(Time.time, 1);
         var p = new Vector3(0, x, 0);
         transform.position = p;
 
