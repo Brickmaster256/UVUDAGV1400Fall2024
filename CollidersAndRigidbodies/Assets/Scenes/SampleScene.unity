@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c883a1ab315844094ac82aef8f97c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 3
+  bounceForce: 10
   firstColor: {r: 1, g: 0, b: 0, a: 1}
   secondColor: {r: 0, g: 1, b: 0, a: 1}
   thirdColor: {r: 0, g: 0, b: 1, a: 1}
