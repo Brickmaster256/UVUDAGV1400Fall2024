@@ -9,6 +9,6 @@ public class TransformController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.right * 500);
+        rb.AddForce(Vector3.right * 300);
     }
 }
