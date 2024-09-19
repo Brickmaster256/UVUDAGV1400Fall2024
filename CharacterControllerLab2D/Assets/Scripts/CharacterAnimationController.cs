@@ -26,10 +26,21 @@ public class CharacterAnimationController : MonoBehaviour
         {
             animator.SetTrigger("Idle");
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animator.SetTrigger("FallTrigger");
+        }
+
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            animator.SetTrigger("HitTrigger");
+        }
+
+        
 
         if (Input.GetButtonDown("Jump"))
         {
-            animator.SetTrigger("Jump");
+            animator.SetTrigger("DoubleJumpTrigger");
         }
 
         if(Input.GetKeyDown(KeyCode.W))
