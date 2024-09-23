@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,28 +6,55 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float jumpForce = 8f;
+    public float gravity = -9.81f;
+
     private CharacterController controller;
     private Transform thisTransform;
-    private Vector3 movementVector = Vector3.zero;
+    public Vector3 velocity;
 
-    void Start()
+    private void Start()
     {
         controller = GetComponent<CharacterController>();
         thisTransform = transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         MoveCharacter();
+        ApplyGravity();
         KeepCharacterOnAxis();
     }
 
+    private void ApplyGravity()
+    {
+        if(!controller.isGrounded)
+        {
+            Debug.Log("not grounded");
+            velocity.y += gravity * Time.deltaTime;
+        }
+        else
+        {
+            Debug.Log("grounded");
+            velocity.y = 0f;
+        }
+
+        controller.Move(velocity * Time.deltaTime);
+    }
+
+
     private void MoveCharacter()
     {
-        movementVector.x = Input.GetAxis("Horizontal");
-        movementVector *= (moveSpeed * Time.deltaTime);
-        controller.Move(movementVector);
+        var moveInput = Input.GetAxis("Horizontal");
+        var move = new Vector3(moveInput, 0, 0) * (moveSpeed * Time.deltaTime);
+        controller.Move(move);
+
+
+        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        {
+            Debug.Log("Jump");
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+        }
     }
 
     private void KeepCharacterOnAxis()

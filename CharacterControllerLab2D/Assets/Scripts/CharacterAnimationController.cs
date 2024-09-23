@@ -20,11 +20,11 @@ public class CharacterAnimationController : MonoBehaviour
     {
         if(Input.GetAxis("Horizontal") !=0)
         {
-            animator.SetTrigger("Run");
+            animator.SetTrigger("RunTrigger");
         }
         else
         {
-            animator.SetTrigger("Idle");
+            animator.SetTrigger("IdleTrigger");
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -40,12 +40,12 @@ public class CharacterAnimationController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            animator.SetTrigger("DoubleJumpTrigger");
+            animator.SetTrigger("JumpTrigger");
         }
 
         if(Input.GetKeyDown(KeyCode.W))
         {
-            animator.SetTrigger("WallJump");
+            animator.SetTrigger("WallJumpTrigger");
         }
     }
 }
