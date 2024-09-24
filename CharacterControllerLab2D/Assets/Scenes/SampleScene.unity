@@ -419,8 +419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20466c54dc8723343ae10e4d48adb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key1: 275
-  key2: 276
+  key1: 100
+  key2: 97
   direction1: 0
   direction2: 180
 --- !u!95 &688478625
