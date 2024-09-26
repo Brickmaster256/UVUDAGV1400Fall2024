@@ -12,31 +12,35 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Transform thisTransform;
     public Vector3 velocity;
+   
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         thisTransform = transform;
     }
-
     private void Update()
     {
+       
+
         MoveCharacter();
         ApplyGravity();
         KeepCharacterOnAxis();
     }
 
+   
     private void ApplyGravity()
     {
-        if(!controller.isGrounded)
+        bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, .8f);
+
+        if( !isGrounded || velocity.y > 0)
         {
-            Debug.Log("not grounded");
+            Debug.Log("Not Grounded");
             velocity.y += gravity * Time.deltaTime;
         }
         else
         {
-            Debug.Log("grounded");
-            velocity.y = 0f;
+            velocity.y = 0;
         }
 
         controller.Move(velocity * Time.deltaTime);
@@ -45,16 +49,19 @@ public class PlayerController : MonoBehaviour
 
     private void MoveCharacter()
     {
+        bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, .8f);
         var moveInput = Input.GetAxis("Horizontal");
         var move = new Vector3(moveInput, 0, 0) * (moveSpeed * Time.deltaTime);
-        controller.Move(move);
+       
 
 
-        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        if (Input.GetButtonDown("Jump") )
         {
             Debug.Log("Jump");
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            Debug.Log(velocity.y);
         }
+        controller.Move(move);
     }
 
     private void KeepCharacterOnAxis()
