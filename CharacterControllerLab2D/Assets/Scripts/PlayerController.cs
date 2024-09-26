@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
     private Transform thisTransform;
-    public Vector3 velocity;
+    private Vector3 velocity;
    
 
     private void Start()
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
        
 
 
-        if (Input.GetButtonDown("Jump") )
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
