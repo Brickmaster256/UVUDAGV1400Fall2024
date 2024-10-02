@@ -5,11 +5,31 @@ using UnityEngine;
 public class AttackController : MonoBehaviour
 {
     public GameObject ThrowAttack;
+
+    public int lastDirectionInput = 1;
+    private int directionOfBullet = -90;
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            lastDirectionInput = 1;
+        }
+        else if(Input.GetKeyDown(KeyCode.A))
+        {
+            lastDirectionInput = -1;
+        }
+
         if(Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(ThrowAttack, new Vector3(0, 0, 0), Quaternion.identity);)
+            if (lastDirectionInput == 1)
+            {
+                directionOfBullet = -90;
+            }
+            else
+            {
+                directionOfBullet = 90;
+            }
+            Instantiate(ThrowAttack, transform.position, Quaternion.Euler(0,0,directionOfBullet));
         }
     }
 }

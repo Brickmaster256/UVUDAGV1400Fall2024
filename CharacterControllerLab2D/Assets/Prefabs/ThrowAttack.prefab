@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8530636061635460299}
   - component: {fileID: 4952589780390793689}
+  - component: {fileID: -6509177447901778598}
   m_Layer: 0
   m_Name: ThrowAttack
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6509177447901778598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4327734215892490830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a73f7c1d12e4d409b68ea6080cb59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 0.02
