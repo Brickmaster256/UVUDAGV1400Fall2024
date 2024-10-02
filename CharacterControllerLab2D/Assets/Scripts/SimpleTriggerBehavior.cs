@@ -7,6 +7,7 @@ public class SimpleTriggerBehavior : MonoBehaviour
 {
     public UnityEvent triggerEvent;
 
+
     private void OnTriggerEnter(Collider other)
     {
         triggerEvent.Invoke();
