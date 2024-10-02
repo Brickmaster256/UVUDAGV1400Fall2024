@@ -8,6 +8,8 @@ public class AttackController : MonoBehaviour
 
     public int lastDirectionInput = 1;
     private int directionOfBullet = -90;
+
+   
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.D))
