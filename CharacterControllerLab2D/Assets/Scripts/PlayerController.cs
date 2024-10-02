@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
     private Transform thisTransform;
-    public Vector3 velocity;
+    private Vector3 velocity;
    
 
     private void Start()
@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
 
         if( !isGrounded || velocity.y > 0)
         {
-            Debug.Log("Not Grounded");
             velocity.y += gravity * Time.deltaTime;
         }
         else
@@ -55,11 +54,9 @@ public class PlayerController : MonoBehaviour
        
 
 
-        if (Input.GetButtonDown("Jump") )
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            Debug.Log("Jump");
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
-            Debug.Log(velocity.y);
         }
         controller.Move(move);
     }
