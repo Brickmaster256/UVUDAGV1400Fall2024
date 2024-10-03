@@ -49,7 +49,7 @@ MonoBehaviour:
   triggerEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 729dcee8225fcc44b98b0c0fdb16c8ba, type: 3}
+      - m_Target: {fileID: 9100000, guid: 480bd98981bbc854ea83317f69308275, type: 2}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 0
