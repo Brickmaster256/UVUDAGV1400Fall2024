@@ -48,4 +48,9 @@ public class CharacterAnimationController : MonoBehaviour
             animator.SetTrigger("WallJumpTrigger");
         }
     }
+
+    private void SetAnimationtrigger(string trigger)
+    {
+        animator.SetTrigger(trigger);
+    }
 }
