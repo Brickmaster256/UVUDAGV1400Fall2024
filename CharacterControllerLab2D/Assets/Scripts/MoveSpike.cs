@@ -10,15 +10,7 @@ public class MoveSpike : MonoBehaviour
     private void Start()
     {
         dirrection = GameObject.FindWithTag("Player");
-        //attackController = GetComponent<AttackController>();    
-        //if (//attackController.lastDirectionInput == 1)
-        //{
-        //bulletSpeed *= 1;
-        //}
-        // else
-        //{
-        //bulletSpeed *= -1;
-        //}
+       
         if(dirrection.GetComponent<AttackController>().lastDirectionInput == 1)
         {
             bulletSpeed *= 1;

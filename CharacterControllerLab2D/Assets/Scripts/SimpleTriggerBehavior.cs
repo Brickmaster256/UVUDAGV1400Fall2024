@@ -6,11 +6,13 @@ using UnityEngine.Events;
 public class SimpleTriggerBehavior : MonoBehaviour
 {
     public UnityEvent triggerEvent;
-    private Animator animator;
+    
+    
 
     private void OnTriggerEnter(Collider other)
     {
         triggerEvent.Invoke();
         Debug.Log("Plater interacted with the object!");
+      
     }
 }
