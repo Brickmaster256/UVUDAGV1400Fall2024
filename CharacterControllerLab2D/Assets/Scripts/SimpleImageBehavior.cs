@@ -11,11 +11,13 @@ public class SimpleImageBehavior : MonoBehaviour
 
     private void Start()
     {
-        Image image = GetComponent<Image>();
+        Image imageObj = GetComponent<Image>();
+        Debug.Log(imageObj);
     }
 
     public void UpdateWithFloatData()
     {
+        Debug.Log(dataObj);
         imageObj.fillAmount = dataObj.value;
     }
 }
