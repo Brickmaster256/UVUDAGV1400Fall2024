@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 8f;
     public float gravity = -9.81f;
+    public bool hasGliderOn;
 
     private CharacterController controller;
     private Transform thisTransform;
@@ -18,16 +19,29 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         thisTransform = transform;
+        hasGliderOn = false;
     }
     private void Update()
     {
        
 
         MoveCharacter();
+        setGravity();
         ApplyGravity();
         KeepCharacterOnAxis();
     }
+     private void setGravity()
+    {
+        if (hasGliderOn)
+        {
+            gravity = -3.27f;
+        }
+        else
+        {
+            gravity = -9.81f;
+        }
 
+    }
    
     private void ApplyGravity()
     {
@@ -40,6 +54,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             velocity.y = 0;
+            hasGliderOn = false;
         }
 
         controller.Move(velocity * Time.deltaTime);
@@ -57,6 +72,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+        }
+        else if (Input.GetButtonDown("Jump") && !hasGliderOn)
+        {
+            hasGliderOn = true;
+            if (velocity.y < 0)
+            {
+                velocity.y = 0;
+            }
+        }
+        else if(Input.GetButtonDown("Jump") && hasGliderOn) 
+        {
+            hasGliderOn = false;
+            if (velocity.y < 0)
+            {
+                velocity.y = 0;
+            }
         }
         controller.Move(move);
     }
