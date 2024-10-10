@@ -1,23 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
+
 public class SimpleImageBehavior : MonoBehaviour
 {
-    private Image imageObj;
-    public SimpleFloatData dataObj;
 
-    private void Start()
+    public SimpleFloatData dataObj;
+    public Slider slider;
+    public int health = 10;
+    public void SetHealth()
     {
-        Image imageObj = GetComponent<Image>();
-        Debug.Log(imageObj);
+        slider.value = dataObj.value;
     }
 
-    public void UpdateWithFloatData()
+    private void Update()
     {
-        Debug.Log(dataObj);
-        imageObj.fillAmount = dataObj.value;
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            dataObj.value = health;
+            SetHealth();
+        }
     }
 }
