@@ -10,7 +10,7 @@ public class SimpleImageBehavior : MonoBehaviour
 
     public SimpleFloatData dataObj;
     public Slider slider;
-    public int health = 10;
+    public int startingValue = 10;
 
     
     public void SetDataValue()
@@ -22,7 +22,7 @@ public class SimpleImageBehavior : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            dataObj.value = health;
+            dataObj.value = startingValue;
             SetDataValue();
         }
     }
