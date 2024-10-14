@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class AttackController : MonoBehaviour
 {
     public GameObject ThrowAttack;
+    public SimpleFloatData manaAmount;
+    
+    public SimpleImageBehavior manaImageBehavior;
 
     public int lastDirectionInput = 1;
     private int directionOfBullet = -90;
@@ -23,15 +27,21 @@ public class AttackController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E))
         {
-            if (lastDirectionInput == 1)
+            if(manaAmount.value > 0)
             {
-                directionOfBullet = -90;
+                if (lastDirectionInput == 1)
+                {
+                    directionOfBullet = -90;
+                }
+                else
+                {
+                    directionOfBullet = 90;
+                }
+                Instantiate(ThrowAttack, transform.position, Quaternion.Euler(0,0,directionOfBullet));
+                manaAmount.UpdateValue(-1);
+                manaImageBehavior.SetDataValue();
             }
-            else
-            {
-                directionOfBullet = 90;
-            }
-            Instantiate(ThrowAttack, transform.position, Quaternion.Euler(0,0,directionOfBullet));
+            
         }
     }
 }
