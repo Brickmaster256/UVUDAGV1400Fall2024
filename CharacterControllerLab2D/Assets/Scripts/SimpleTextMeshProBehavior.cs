@@ -11,6 +11,8 @@ public class SimpleTextMeshProBehavior : MonoBehaviour
     private TextMeshProUGUI textObj;
     public SimpleIntData dataObj;
 
+
+
     private void Start()
     {
         textObj = GetComponent<TextMeshProUGUI>();

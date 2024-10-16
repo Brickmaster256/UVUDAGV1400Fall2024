@@ -9,6 +9,7 @@ public class AttackController : MonoBehaviour
     public SimpleFloatData manaAmount;
     
     public SimpleImageBehavior manaImageBehavior;
+    public FloatVisuals manaPoints;
 
     public int lastDirectionInput = 1;
     private int directionOfBullet = -90;
@@ -40,6 +41,7 @@ public class AttackController : MonoBehaviour
                 Instantiate(ThrowAttack, transform.position, Quaternion.Euler(0,0,directionOfBullet));
                 manaAmount.UpdateValue(-1);
                 manaImageBehavior.SetDataValue();
+                manaPoints.UpdateWithFloatData();
             }
             
         }

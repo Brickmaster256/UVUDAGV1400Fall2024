@@ -12,18 +12,13 @@ public class SimpleImageBehavior : MonoBehaviour
     public Slider slider;
     public int startingValue = 10;
 
-    
+    private void Start()
+    {
+        SetDataValue();
+    }
     public void SetDataValue()
     {
         slider.value = dataObj.value;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            dataObj.value = startingValue;
-            SetDataValue();
-        }
-    }
 }
