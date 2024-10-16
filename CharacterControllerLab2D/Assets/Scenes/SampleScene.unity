@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 201649986}
   - component: {fileID: 201649988}
   - component: {fileID: 201649987}
+  - component: {fileID: 201649989}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -262,7 +263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -367.65, y: -151.77}
+  m_AnchoredPosition: {x: 71.472, y: 123}
   m_SizeDelta: {x: 142.9445, y: 31.1693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201649987
@@ -362,6 +363,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201649985}
   m_CullTransparentMesh: 1
+--- !u!114 &201649989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201649985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494ca89a1fe1d194eb9abf7ce4c42238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataObj: {fileID: 1992526606}
 --- !u!1 &304060614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1717,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1951430694}
@@ -1710,6 +1728,22 @@ PrefabInstance:
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 325758700}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1992526606}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: UpdateValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: SimpleIntData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4132210049357056423, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0922297
