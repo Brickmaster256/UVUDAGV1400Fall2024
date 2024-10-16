@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f871df93d75a32744b2009569a54b908, type: 3}
   m_Name: HealthData
   m_EditorClassIdentifier: 
-  value: 9
+  value: 10
