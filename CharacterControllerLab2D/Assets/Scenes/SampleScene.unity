@@ -263,7 +263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.472, y: 123}
+  m_AnchoredPosition: {x: -460, y: -151.77}
   m_SizeDelta: {x: 142.9445, y: 31.1693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201649987
@@ -1717,8 +1717,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -1733,16 +1741,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1992526606}
     - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 201649989}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
       value: UpdateValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: UpdateWithIntData
       objectReference: {fileID: 0}
     - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: SimpleIntData, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: SimpleTextMeshProBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 112074881577286949, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4132210049357056423, guid: 2b102ce0fcfec6f4f87e602bbb273242, type: 3}
       propertyPath: m_LocalPosition.x
