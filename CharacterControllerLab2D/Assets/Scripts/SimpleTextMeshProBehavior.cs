@@ -10,7 +10,7 @@ public class SimpleTextMeshProBehavior : MonoBehaviour
 {
     private TextMeshProUGUI textObj;
     public SimpleIntData dataObj;
-
+    public ScoreBehavior Score;
 
 
     private void Start()
@@ -22,6 +22,6 @@ public class SimpleTextMeshProBehavior : MonoBehaviour
     public void UpdateWithIntData()
     {
         
-        textObj.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
+        textObj.text = Score.score.ToString(CultureInfo.InvariantCulture);
     }
 }
