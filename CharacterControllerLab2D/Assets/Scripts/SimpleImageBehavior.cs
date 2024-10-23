@@ -16,6 +16,10 @@ public class SimpleImageBehavior : MonoBehaviour
     {
         SetDataValue();
     }
+    private void Update()
+    {
+        SetDataValue();
+    }
     public void SetDataValue()
     {
         slider.value = dataObj.value;

@@ -9,7 +9,6 @@ using System.Globalization;
 public class SimpleTextMeshProBehavior : MonoBehaviour
 {
     private TextMeshProUGUI textObj;
-    public SimpleIntData dataObj;
     public ScoreBehavior Score;
 
 
@@ -19,6 +18,10 @@ public class SimpleTextMeshProBehavior : MonoBehaviour
         UpdateWithIntData();
     }
 
+    private void Update()
+    {
+        UpdateWithIntData();
+    }
     public void UpdateWithIntData()
     {
         

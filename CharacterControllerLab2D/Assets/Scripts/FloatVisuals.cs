@@ -17,6 +17,10 @@ public class FloatVisuals : MonoBehaviour
         UpdateWithFloatData();
     }
 
+    private void Update()
+    {
+        UpdateWithFloatData();
+    }
     public void UpdateWithFloatData()
     {
         floatText.text = floatData.value.ToString(CultureInfo.InvariantCulture);
