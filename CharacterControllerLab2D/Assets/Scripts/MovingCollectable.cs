@@ -17,11 +17,23 @@ public class MovingCollectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+    private void Move()
+    {
         var thisPosition = thisTransform.position;
         var deltaHeight = Mathf.PingPong(Time.time, 1);
-        var height = new Vector3(thisPosition.x, deltaHeight, 0); 
+        var height = new Vector3(thisPosition.x, deltaHeight, 0);
 
         transform.position = height;
         transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);
+    }
+    public void Destroy()
+    {
+        for (int index = 0; index < 10000;  index++)
+        {
+
+        }
+        Destroy(this.gameObject);
     }
 }
