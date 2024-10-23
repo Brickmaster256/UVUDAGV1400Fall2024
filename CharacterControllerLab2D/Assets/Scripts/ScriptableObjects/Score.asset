@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf17b4f9cec64fd41bd6d006712cc654, type: 3}
   m_Name: Score
   m_EditorClassIdentifier: 
-  score: 10
+  score: 256
