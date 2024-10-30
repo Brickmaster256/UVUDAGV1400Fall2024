@@ -21,4 +21,5 @@ public class SpawnApple : MonoBehaviour
             time += 1;
         }
     }
+    
 }
