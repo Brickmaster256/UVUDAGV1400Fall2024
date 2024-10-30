@@ -23,6 +23,6 @@ public class FloatVisuals : MonoBehaviour
     }
     public void UpdateWithFloatData()
     {
-        floatText.text = floatData.value.ToString(CultureInfo.InvariantCulture);
+        floatText.text = floatText.text.Substring(0,4) + floatData.value.ToString(CultureInfo.InvariantCulture);
     }
 }
