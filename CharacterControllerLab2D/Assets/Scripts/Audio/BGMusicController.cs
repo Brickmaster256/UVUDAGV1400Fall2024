@@ -8,13 +8,16 @@ public class BGMusicController : MonoBehaviour
 
     public void ToggleMusic()
     {
+        Debug.Log("Click!");
         if (BGMusicSource.isPlaying)
         {
             BGMusicSource.Pause();
+            Debug.Log("Paused!");
         }
         else
         {
             BGMusicSource.Play();
+            Debug.Log("Playing!");
         }
     }
 
