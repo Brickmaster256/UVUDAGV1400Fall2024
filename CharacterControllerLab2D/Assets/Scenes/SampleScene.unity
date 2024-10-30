@@ -673,8 +673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 348.3, y: -221.69}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 346.7532, y: -215.7}
+  m_SizeDelta: {x: 163.0937, y: 41.981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321374292
 MonoBehaviour:
@@ -719,7 +719,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 321374293}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 700290029}
+        m_TargetAssemblyTypeName: BGMusicController, Assembly-CSharp
+        m_MethodName: ToggleMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &321374293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,6 +1605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700290028}
   - component: {fileID: 700290027}
+  - component: {fileID: 700290029}
   m_Layer: 0
   m_Name: BGMusicHolder
   m_TagString: Untagged
@@ -1610,11 +1623,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0c2f5e196afe4644d9b1ffb8d644851d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1711,6 +1724,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &700290029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700290026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c3e08fe48af404ca997941dc1b53e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMusicSource: {fileID: 700290027}
 --- !u!1 &851702847
 GameObject:
   m_ObjectHideFlags: 0
