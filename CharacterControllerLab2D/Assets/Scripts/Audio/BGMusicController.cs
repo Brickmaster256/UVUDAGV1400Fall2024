@@ -20,5 +20,12 @@ public class BGMusicController : MonoBehaviour
             Debug.Log("Playing!");
         }
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            ToggleMusic();
+        }
+    }
 
 }
