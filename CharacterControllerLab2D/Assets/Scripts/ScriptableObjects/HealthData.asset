@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HealthData
   m_EditorClassIdentifier: 
   maxValue: 10
-  value: 10
+  value: 9
