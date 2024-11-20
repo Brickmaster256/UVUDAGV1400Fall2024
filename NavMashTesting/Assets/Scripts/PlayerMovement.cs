@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, floorDistance);
         movementVector.z = Input.GetAxis("Horizontal");
-        movementVector.x = Input.GetAxis("Vertical");
+        movementVector.x = -Input.GetAxis("Vertical");
         movementVector *= (moveSpeed * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
