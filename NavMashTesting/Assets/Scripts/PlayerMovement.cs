@@ -42,10 +42,20 @@ public class PlayerMovement : MonoBehaviour
     
     private void MoveCharacter()
     {
+        bool isGrounded = Physics.Raycast(transform.position, -Vector3.up, floorDistance);
         movementVector.z = Input.GetAxis("Horizontal");
         movementVector.x = Input.GetAxis("Vertical");
         movementVector *= (moveSpeed * Time.deltaTime);
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+
+        }
+
         controller.Move(movementVector);
+
+        
     }
 
 
