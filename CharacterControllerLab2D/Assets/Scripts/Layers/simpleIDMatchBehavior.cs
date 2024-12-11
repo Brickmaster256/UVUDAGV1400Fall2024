@@ -10,18 +10,18 @@ public class simpleIDMatchBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Found One");
+        
         var otherID = other.GetComponent<SimpleIdBehavior>();
         
         if (otherID.id == id)
         {
             matchEvent.Invoke();
-            Debug.Log("Matched ID: " + id);
+            
         }
         else
         {
             noMatchEvent.Invoke();
-            Debug.Log("No Match: " + id);
+            
         }
     }
 }
