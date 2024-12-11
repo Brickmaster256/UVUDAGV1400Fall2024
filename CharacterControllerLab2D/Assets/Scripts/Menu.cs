@@ -21,10 +21,9 @@ public class Menu : MonoBehaviour
 
     public void OnEscape()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
+       
+        SceneManager.LoadScene(0);
+        
     }
     public void OnQuitButton()
     {
