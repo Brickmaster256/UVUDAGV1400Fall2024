@@ -9,7 +9,23 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void OnBackButton()
+    {
+        SceneManager.LoadScene(0);
+    }
 
+    public void OnHowToButton()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void OnEscape()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
     public void OnQuitButton()
     {
         Application.Quit();
