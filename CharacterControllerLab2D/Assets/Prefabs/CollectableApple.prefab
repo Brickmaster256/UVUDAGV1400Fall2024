@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7095096127038025952}
   - component: {fileID: 7090722399843057656}
   - component: {fileID: 7275821646082851807}
+  - component: {fileID: -6283446242780529674}
   m_Layer: 0
   m_Name: CollectableApple
   m_TagString: Untagged
@@ -183,6 +184,19 @@ MonoBehaviour:
           m_StringArgument: CollectTrigger
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -6283446242780529674}
+        m_TargetAssemblyTypeName: HideCollectables, Assembly-CSharp
+        m_MethodName: HideObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: CollectTrigger
+          m_BoolArgument: 0
+        m_CallState: 2
+  pausetime: 0.5
 --- !u!65 &7095096127038025952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -235,5 +249,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 554b7e793c3f8ee4286e7b014b0ae006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6283446242780529674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8915000140627304561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe0f559fadf78d489d84d7ef88381f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
